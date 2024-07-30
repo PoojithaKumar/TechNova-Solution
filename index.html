@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!-- Specifies the character encoding for the document -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Sets the viewport to ensure the website is responsive -->
+    <title>TechNova Solutions</title> <!-- Title of the webpage -->
+    <link rel="stylesheet" href="styles.css"> <!-- Links to the external CSS file for styling -->
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>TechNova</li> <!-- Company name in the navigation bar -->
+                <li><a href="#home">Home</a></li> <!-- Link to the home section -->
+                <li><a href="#about">About</a></li> <!-- Link to the about section -->
+                <li><a href="#services">Services</a></li> <!-- Link to the services section -->
+                <li><a href="#contact">Contact</a></li> <!-- Link to the contact section -->
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <div class="container">
+                    <h1>Welcome to TechNova Solutions</h1> <!-- Main heading of the home section -->
+                    <p>Innovating the Future, Today.</p> <!-- Subtitle of the home section -->
+                    <p>At TechNova Solutions, we specialize in delivering cutting-edge technology solutions tailored to your business needs. Our team of experts is dedicated to helping you navigate the ever-evolving tech landscape.</p>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="container">
+                <h2>About Us</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>TechNova Solutions was founded in 2020 with the mission to provide innovative tech solutions to businesses of all sizes. Our team is passionate about technology and committed to excellence. We believe in empowering our clients with the tools and knowledge they need to succeed in the digital age.</p>
+                    </div>
+                    <div class="about-logo">
+                        <img src="img/logo.png" alt="TechNova Logo">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services">
+            <div class="container">
+                <h2>Our Services</h2>
+                <div class="services-grid">
+                    <div class="service">
+                        <h3>Web Development</h3>
+                        <p>We build responsive and engaging websites that help your business stand out online.</p>
+                    </div>
+                    <div class="service">
+                        <h3>Mobile App Development</h3>
+                        <p>Our team creates intuitive and powerful mobile applications for both Android and iOS platforms.</p>
+                    </div>
+                    <div class="service">
+                        <h3>Cloud Solutions</h3>
+                        <p>Leverage the power of the cloud with our comprehensive cloud services tailored to your business needs.</p>
+                    </div>
+                    <div class="service">
+                        <h3>IT Consulting</h3>
+                        <p>Our experts provide strategic IT consulting to help you make informed decisions and optimize your technology investments.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+                <h2>Get in Touch</h2>
+                <form id="contactForm" method="POST" action="submit.php"> <!-- Contact form with POST method -->
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required> <!-- Input fields -->
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="subject">Subject:</label>
+                    <input type="text" id="subject" name="subject" required>
+                    
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                    
+                    <button type="submit">Submit</button> <!-- Submit button for the form -->
+                </form>
+                <div id="formMessage"></div> <!-- Div for displaying form submission messages -->
+            </div>
+        </section>
+    </main>
+
+    <button id="backToTop" onclick="scrollToTop()">Back to Top</button> <!-- Button to scroll back to the top of the page -->
+
+    <script src="scripts.js"></script> <!-- Link to the external JavaScript file -->
+</body>
+</html>

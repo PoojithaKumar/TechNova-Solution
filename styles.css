@@ -1,0 +1,197 @@
+/* Basic Reset */
+* {
+    margin: 0; /* Remove default margin and padding from all elements */
+    padding: 0;
+    box-sizing: border-box; /* Ensure padding and border are included in element's total width and height */
+}
+
+body {
+    font-family: Arial, sans-serif; /* Set default font family */
+    line-height: 1.6; /* Set default line height */
+    text-align: center; /* Center-align text */
+}
+
+header {
+    background: #04307a;
+    color: #fff;
+    padding: 1em 0; /* Add vertical padding to header */
+    position: fixed; /* Fix header position at the top */
+    width: 100%; /* Make header full width */
+    top: 0;
+    z-index: 1000; /* Ensure header is above other content */
+}
+
+header nav ul {
+    list-style: none;
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Distribute space between items */
+    align-items: center;
+}
+
+header nav ul li {
+    margin: 0 15px; /* Add horizontal margin to list items */
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none; /* Remove underline from links */
+    font-size: 20px;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
+
+nav ul li a.active {
+    color: #0852bd;
+    font-weight: bold;
+}
+
+
+main {
+    padding-top: 70px; /* Ensure content is not hidden behind fixed header */
+}
+
+section {
+    height: 100vh;
+    display: flex;
+    align-items: flex-start; /* Align items at the top */
+    justify-content: center;
+    text-align: center;
+    color: #000; /* Default color for text */
+    background-size: cover; /* Ensure background image covers the section */
+    background-position: center; /* Center background image */
+}
+
+#home {
+    background: url('img/background1.jpg') no-repeat center center/cover;
+    color: #fff; /* White text color for home section */
+}
+
+#about, #services, #contact {
+    background: url('img/secbg1.jpg') no-repeat center center/cover;
+}
+
+.container {
+    max-width: 1200px; /* Set maximum width */
+    margin: 0 auto; /* Center container */
+    padding: 20px;
+    margin-top: 100px; /* Align content at the top of the section */
+}
+
+h1, h2, h3 {
+    font-size: 40px;
+}
+
+p, label, input, textarea, button {
+    font-size: 20px;
+}
+
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about-text {
+    width: 50%;
+}
+
+.about-logo {
+    width: 50%;
+    text-align: right;
+}
+
+.about-logo img {
+    width: 50%; /* Set width of logo image */
+}
+
+.services-grid {
+    margin-top: 50px;
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(2, 1fr); /* Create 2 columns of equal width */
+    gap: 30px; /* Add gap between grid items */
+}
+
+.service {
+    border: 5px outset #ccc; /* Set border style */
+    padding: 20px;
+    border-radius: 5px; /* Round corners */
+    background: transparent; /* Set transparent background */
+}
+
+form {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    background: rgba(4, 48, 122, 0.5); /* Set background color with opacity */
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+form label {
+    margin-bottom: 5px; /* Add bottom margin */
+}
+
+form input, form textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 10px;
+    background: #04307a;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+form button:hover {
+    background: #0852bd;
+}
+
+#backToTop {
+    position: fixed; /* Fix position at bottom right */
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background: #04307a;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer; /* Change cursor to pointer */
+    display: none; /* Hide button initially */
+}
+
+#backToTop:hover {
+    background: #0852bd; /* Change background color on hover */
+}
+
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column; /* Stack nav items vertically on small screens */
+    }
+
+    header nav ul li {
+        margin: 10px 0; /* Add vertical margin to nav items */
+    }
+
+    .about-content {
+        flex-direction: column; /* Stack about content vertically */
+    }
+
+    .about-text, .about-logo {
+        width: 100%; /* Set full width for about text and logo */
+    }
+
+    .about-logo img {
+        width: 80%; /* Set logo image width */
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr; /* Create single column grid */
+    }
+}
